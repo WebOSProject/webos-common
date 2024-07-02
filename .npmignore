@@ -1,0 +1,9 @@
+src/
+.vite/
+.idea
+node_modules/
+*.log
+*.ts
+*.tsx
+vite.config.ts
+tsconfig.json

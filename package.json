@@ -1,8 +1,11 @@
 {
-  "name": "web-os-common",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@webos-project/common",
+  "private": false,
+  "version": "0.1.0",
   "type": "module",
+  "main": "dist/common.umd.js",
+  "module": "dist/common.es.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -14,6 +17,7 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@types/node": "^20.14.9",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.13.1",
@@ -25,5 +29,16 @@
     "typescript": "^5.2.2",
     "vite": "^5.3.1",
     "vite-plugin-dts": "^3.9.1"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/common.es.js",
+      "require": "./dist/common.umd.js",
+      "types": "./dist/index.d.ts"
+    }
   }
 }
